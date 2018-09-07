@@ -17,6 +17,4 @@ if (!window.Intl) {
   window.Intl = intl;
 }
 
-api.setEndpoint('/api');
-
 ReactDOM.render(<App />, document.getElementById('app'));
