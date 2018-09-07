@@ -1,30 +1,22 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import Paper from 'material-ui/Paper';
-
-import AppBar from 'containers/AppBar';
-import AppMenu from 'containers/AppMenu';
-import ModalsLayout from 'containers/ModalsLayout/ModalsLayout';
-import NotFound from 'containers/NotFound';
-import ServersPage from 'containers/ServersPage/ServersPage';
-import ProgressBar from 'components/ProgressBar';
+import Header from '../components/Header/Header';
 
 export class AppLayout extends React.Component {
   render() {
-    const {loading} = this.props;
-
     return (
       <div>
-        Hello
-        </div>
+        <h1>Counter value though Redux : </h1>
+        <h2>{this.props.counter}</h2>
+      </div>
     );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    loading: state.api.get('loading')
+    counter: state.counter.value
   };
 }
 
