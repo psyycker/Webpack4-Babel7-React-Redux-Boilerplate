@@ -20,8 +20,8 @@ React boilerplate with ES2015, Express.js, and Webpack
 
 ### Installation
 ```bash
-git clone git@github.com:antonfisher/react-express-webpack.git
-cd react-express-webpack
+git clone https://github.com/psyycker/Webpack4-Babel7-React-Redux-Boilerplate.git
+cd Webpack4-Babel7-React-Redux-Boilerplate
 npm install
 
 # remove boilerplate git references
