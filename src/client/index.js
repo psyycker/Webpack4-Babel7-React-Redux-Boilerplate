@@ -7,7 +7,6 @@ import intl from 'intl';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import api from 'api/index';
 import App from './App';
 
 // global styles
