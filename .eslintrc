@@ -14,5 +14,14 @@
     "react/prefer-stateless-function": "off",
     "max-len": "warn",
     "import/no-named-as-default": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.*"],
+      "rules": {
+        "no-unused-vars": "off",
+        "no-undef": "off"
+      }
+    }
+  ]
 }
