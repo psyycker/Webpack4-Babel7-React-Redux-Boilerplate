@@ -1,13 +1,13 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import AppLayout from 'containers/AppLayout';
+import AppLayout from './containers/AppLayout';
 import NotFound from './containers/NotFound';
 import CounterLayout from './containers/CounterLayout';
 import Header from './components/Header/Header';
 
 
-export default function() {
+export default function () {
   return (
     <Router>
       <div>

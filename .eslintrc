@@ -1,31 +1,18 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "jest": true,
-    "node": true
-  },
   "extends": [
-    "fbjs",
-    "plugin:prettier/recommended"
+    "airbnb"
   ],
-  "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "module"
-  },
-  "plugins": [
-    "prettier",
-    "jsx-a11y",
-    "react"
-  ],
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./config/webpack.config.prod.js"
-      }
-    },
-    "react": {
-      "version": "16.4.1"
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
     }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "react/prefer-stateless-function": "off",
+    "max-len": "warn",
+    "import/no-named-as-default": "off"
   }
 }

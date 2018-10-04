@@ -1,15 +1,15 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
 import styles from './Header.scss';
-import {NavLink} from 'react-router-dom';
 
-function Header({children}) {
+function Header() {
   return (
     <div className={styles.header}>
-    <NavLink to='/'>
+      <NavLink to="/">
         Home
       </NavLink>
-      <NavLink to='/counter'>
+      <NavLink to="/counter">
         Counter
       </NavLink>
     </div>

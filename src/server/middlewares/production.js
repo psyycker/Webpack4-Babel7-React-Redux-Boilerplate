@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const {resolve} = require('path');
 const express = require('express');
 const compression = require('compression');

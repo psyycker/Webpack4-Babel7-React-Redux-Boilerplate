@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import '@babel/polyfill';
 import 'whatwg-fetch';
 
@@ -7,7 +9,7 @@ import intl from 'intl';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import App from './App.jsx';
 
 // global styles
 import './style.scss';

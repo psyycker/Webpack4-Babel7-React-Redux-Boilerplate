@@ -8,7 +8,7 @@ React boilerplate with ES2015, Express.js, and Webpack
 - Express.js (v4) as production and development server
 - Webpack 4 (production and development configurations)
 - SCSS support (+ sanitize.css included)
-- ES2015+
+- ES7
 
 ## Features
 - preconfigured router

@@ -1,5 +1,5 @@
-import {Iterable} from 'immutable';
-import {createLogger} from 'redux-logger';
+import { Iterable } from 'immutable';
+import { createLogger } from 'redux-logger';
 
 const reduxActionsLogger = createLogger({
   collapsed: true,
@@ -15,7 +15,7 @@ const reduxActionsLogger = createLogger({
       }
     });
     return newState;
-  }
+  },
 });
 
 export default reduxActionsLogger;
