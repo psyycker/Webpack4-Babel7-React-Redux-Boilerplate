@@ -1,8 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export class AppLayout extends React.Component {
+export default class CounterDisplay extends React.Component {
   render() {
     const { counter } = this.props;
     return (
@@ -14,14 +13,6 @@ export class AppLayout extends React.Component {
   }
 }
 
-AppLayout.propTypes = {
+CounterDisplay.propTypes = {
   counter: PropTypes.number.isRequired,
 };
-
-function mapStateToProps(state) {
-  return {
-    counter: state.counter.value,
-  };
-}
-
-export default connect(mapStateToProps)(AppLayout);

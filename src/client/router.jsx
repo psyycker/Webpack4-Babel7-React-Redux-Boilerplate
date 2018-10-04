@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import AppLayout from './containers/AppLayout';
+import AppLayout from './containers/counter-display';
 import NotFound from './containers/NotFound';
-import CounterLayout from './containers/CounterLayout';
+import CounterLayout from './containers/counter-incrementer';
 import Header from './components/Header/Header';
 
 
