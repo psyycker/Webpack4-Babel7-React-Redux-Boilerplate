@@ -33,6 +33,7 @@ module.exports = {
           },
         },
       },
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
       {
         test: /\.html$/,
         loader: 'html-loader',
@@ -83,7 +84,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules', join('src', 'client')],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', 'ts', 'tsx', 'json'],
   },
   optimization: {
     splitChunks: {
