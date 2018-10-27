@@ -9,7 +9,6 @@ React boilerplate with ES2015, Express.js, and Webpack
 - Webpack 4 (production and development configurations)
 - SCSS support (+ sanitize.css included)
 - ES7
-- Gitflow based on https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
 ## Features
 - preconfigured router
