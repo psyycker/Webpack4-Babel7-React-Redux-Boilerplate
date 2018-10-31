@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create counter page snapshot 1`] = `
+<div>
+  <h1>
+    Increase the counter through Redux :
+    0
+  </h1>
+  <input
+    onClick={[Function]}
+    type="submit"
+    value="increase"
+  />
+  <input
+    onClick={[Function]}
+    type="submit"
+    value="decrease"
+  />
+</div>
+`;
