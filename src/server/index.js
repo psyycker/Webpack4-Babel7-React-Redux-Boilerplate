@@ -1,8 +1,8 @@
-const http = require('http');
-const express = require('express');
-const bodyParser = require('body-parser');
-const setupApiRoutes = require('./middlewares/api');
-const logger = require('./logger');
+import http from 'http';
+import express from 'express';
+import bodyParser from 'body-parser';
+import logger from './logger';
+import setupApiRoutes from './middlewares/api';
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 process.env.HTTP_PORT = process.env.HTTP_PORT || 3000;

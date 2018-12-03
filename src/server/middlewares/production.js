@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-const {resolve} = require('path');
-const express = require('express');
-const compression = require('compression');
+import { resolve } from 'path';
+import express from 'express';
+import compression from 'compression'
 
 const clientBuildPath = resolve(__dirname, '..', '..', 'client');
 

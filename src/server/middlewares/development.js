@@ -1,11 +1,11 @@
 /* eslint-disable */
 
-const {resolve} = require('path');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
-const logger = require('../logger');
-const webpackConfig = require('../../../config/webpack.config.dev');
+import { resolve } from 'path';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackHotMiddleware from 'webpack-hot-middleware';
+import logger from '../logger';
+import webpackConfig from '../../../config/webpack.config.dev'
 
 const compiler = webpack(webpackConfig);
 
