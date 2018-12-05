@@ -7,7 +7,7 @@ const IS_DEV = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   target: 'web',
-  entry: ['./src/client/index.jsx'],
+  entry: ['./src/client/index.tsx'],
   output: {
     publicPath: '/',
     path: resolve(__dirname, '..', 'build', 'client'),
@@ -32,6 +32,10 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
+      },
+      {
+        test: /\.ts(x?)$/,
+        loader: "awesome-typescript-loader"
       },
       {
         test: /\.html$/,
@@ -83,7 +87,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules', join('src', 'client')],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', 'ts', 'tsx'],
   },
   optimization: {
     splitChunks: {

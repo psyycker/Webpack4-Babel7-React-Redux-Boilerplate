@@ -11,6 +11,7 @@ module.exports = merge(commonConfig, {
     new UglifyJsPlugin({
       parallel: true,
       extractComments: true,
+      test: /\.ts/i
     }),
     new HtmlWebpackPlugin({
       hash: true,
