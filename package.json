@@ -6,7 +6,7 @@
   "description": "Blog Base to create blogs",
   "license": "MIT",
   "engines": {
-    "node": ">10."
+    "node": ">=10.13.0"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon  --watch src --exec babel-node src/server --source-maps",
