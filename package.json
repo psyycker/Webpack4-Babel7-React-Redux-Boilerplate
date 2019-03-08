@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0",
+  "version": "2.0.0",
   "author": {
     "name": "Remy Villulles"
   },
-  "description": "Blog Base to create blogs",
+  "description": "React boilerplate with ES7, Express.js, Webpack and airbnb linter",
   "license": "MIT",
   "engines": {
     "node": ">=10.13.0"
