@@ -13,7 +13,8 @@
     "import/no-extraneous-dependencies": "off",
     "react/prefer-stateless-function": "off",
     "max-len": "warn",
-    "import/no-named-as-default": "off"
+    "import/no-named-as-default": "off",
+    "prefer-object-spread": "off"
   },
   "overrides": [
     {

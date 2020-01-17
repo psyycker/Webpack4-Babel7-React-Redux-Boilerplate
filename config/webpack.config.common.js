@@ -13,6 +13,8 @@ module.exports = {
     path: resolve(__dirname, '..', 'build', 'client'),
     filename: '[name].js',
   },
+  // Disable big warning telling that asset went over the maximum recommended size (250kb)
+  performance: { hints: false },
   module: {
     rules: [
       // Remove this rule to disable automatic linter
@@ -41,8 +43,7 @@ module.exports = {
         test: /\.s?css$/,
         use: ExtractTextPlugin.extract({
           fallback: {
-            loader: 'style-loader',
-            options: { sourceMap: IS_DEV },
+            loader: 'style-loader'
           },
           use: [
             {
