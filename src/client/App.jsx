@@ -6,16 +6,14 @@ import { IntlProvider } from 'react-intl';
 import store from './store';
 import Router from './router';
 
-class App extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <IntlProvider locale="en">
-          <Router />
-        </IntlProvider>
-      </Provider>
-    );
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <IntlProvider locale="en">
+        <Router />
+      </IntlProvider>
+    </Provider>
+  );
 }
 
 export default hot(module)(App);
