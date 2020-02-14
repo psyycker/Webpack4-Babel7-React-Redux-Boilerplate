@@ -15,7 +15,8 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack -p --progress --config=config/webpack.config.prod.js",
     "build:server": "copyfiles -a -u 1 src/server/**/**/* build",
-    "test": "jest"
+    "test": "jest",
+    "install:clean": "rimraf package-lock.json node_modules && npm install"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -85,7 +86,7 @@
     "eslint-plugin-flowtype": "4.6.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-relay": "1.6.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
@@ -103,9 +104,10 @@
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.7.0",
     "prettier": "1.19.1",
+    "prettier-eslint": "^9.0.1",
     "react-hot-loader": "4.12.19",
     "react-intl": "3.12.0",
-    "rimraf": "3.0.2",
+    "rimraf": "^3.0.2",
     "sanitize.css": "11.0.0",
     "sass-loader": "8.0.2",
     "style-loader": "1.1.3",

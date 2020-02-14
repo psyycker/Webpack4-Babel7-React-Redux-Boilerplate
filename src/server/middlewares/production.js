@@ -7,7 +7,9 @@ import compression from 'compression'
 const clientBuildPath = resolve(__dirname, '..', '..', 'client');
 
 module.exports = function setup(app) {
-  app.use(compression());
+  app.use(compression({
+    level: 9
+  }));
   app.use('/', express.static(clientBuildPath));
 
   // all other requests be handled by UI itself

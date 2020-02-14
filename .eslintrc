@@ -2,6 +2,7 @@
   "extends": [
     "airbnb"
   ],
+  "plugins": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 7,
     "ecmaFeatures": {
@@ -14,7 +15,10 @@
     "react/prefer-stateless-function": "off",
     "max-len": "warn",
     "import/no-named-as-default": "off",
-    "prefer-object-spread": "off"
+    "prefer-object-spread": "off",
+    "prettier/prettier": "error",
+    "comma-dangle": "off",
+    "arrow-parens": "off"
   },
   "overrides": [
     {

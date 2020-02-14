@@ -11,7 +11,7 @@ module.exports = {
   output: {
     publicPath: '/',
     path: resolve(__dirname, '..', 'build', 'client'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   // Disable big warning telling that asset went over the maximum recommended size (250kb)
   performance: { hints: false },
@@ -22,7 +22,7 @@ module.exports = {
         enforce: 'pre',
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       // end of linter rull
       {
@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'html-loader',
+        loader: 'html-loader'
       },
       {
         test: /\.s?css$/,
@@ -49,42 +49,42 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                //localIdentName: IS_DEV ? '[path]-[name]_[local]' : '[name]_[local]_[hash:5]', // [hash:base64]
+                // localIdentName: IS_DEV ? '[path]-[name]_[local]' : '[name]_[local]_[hash:5]', // [hash:base64]
                 modules: true,
-                sourceMap: IS_DEV,
-              },
+                sourceMap: IS_DEV
+              }
             },
             {
               loader: 'sass-loader',
-              options: { sourceMap: IS_DEV },
+              options: { sourceMap: IS_DEV }
             },
             {
               loader: 'postcss-loader',
               options: {
                 ident: 'postcss',
                 plugins: () => [postcssPresetEnv()],
-                sourceMap: IS_DEV,
-              },
-            },
-          ],
-        }),
+                sourceMap: IS_DEV
+              }
+            }
+          ]
+        })
       },
       {
         test: /\.(png|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-      },
-    ],
+        loader: 'file-loader'
+      }
+    ]
   },
   plugins: [
     new ExtractTextPlugin({
       filename: '[name].css',
-      disable: IS_DEV,
+      disable: IS_DEV
     }),
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new webpack.EnvironmentPlugin(['NODE_ENV'])
   ],
   resolve: {
     modules: ['node_modules', join('src', 'client')],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   optimization: {
     splitChunks: {
@@ -92,10 +92,10 @@ module.exports = {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'all',
-        },
-      },
-    },
+          chunks: 'all'
+        }
+      }
+    }
   },
   stats: {
     assetsSort: '!size',
@@ -103,6 +103,6 @@ module.exports = {
     chunks: false,
     colors: true,
     entrypoints: false,
-    modules: false,
-  },
+    modules: false
+  }
 };
