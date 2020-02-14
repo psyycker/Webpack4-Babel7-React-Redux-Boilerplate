@@ -3,7 +3,7 @@ import CounterDisplay from './CounterDisplay';
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter.value,
+    counter: state.counter.value
   };
 }
 

@@ -22,7 +22,8 @@
     "indent": "off",
     "operator-linebreak": "off",
     "space-before-function-paren": "off",
-    "implicit-arrow-linebreak": "off"
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-one-expression-per-line": "off"
   },
   "globals": {
     "window": true

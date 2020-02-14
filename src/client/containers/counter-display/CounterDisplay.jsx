@@ -12,5 +12,5 @@ export default function CounterDisplay(props) {
 }
 
 CounterDisplay.propTypes = {
-  counter: PropTypes.number.isRequired,
+  counter: PropTypes.number.isRequired
 };
