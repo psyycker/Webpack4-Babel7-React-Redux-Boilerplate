@@ -18,7 +18,14 @@
     "prefer-object-spread": "off",
     "prettier/prettier": "error",
     "comma-dangle": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "indent": "off",
+    "operator-linebreak": "off",
+    "space-before-function-paren": "off",
+    "implicit-arrow-linebreak": "off"
+  },
+  "globals": {
+    "window": true
   },
   "overrides": [
     {

@@ -13,4 +13,8 @@ if (module.hot) {
   middlewares.push(reduxActionsLogger);
 }
 
-export default createStore(reducers, initialState, applyMiddleware(...middlewares));
+export default createStore(
+  reducers,
+  initialState,
+  applyMiddleware(...middlewares)
+);

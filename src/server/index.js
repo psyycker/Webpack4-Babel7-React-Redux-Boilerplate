@@ -20,7 +20,10 @@ function onUnhandledError(err) {
 process.on('unhandledRejection', onUnhandledError);
 process.on('uncaughtException', onUnhandledError);
 
-const setupAppRoutes = process.env.NODE_ENV === 'development' ? require('./middlewares/development') : require('./middlewares/production');
+const setupAppRoutes =
+  process.env.NODE_ENV === 'development'
+    ? require('./middlewares/development')
+    : require('./middlewares/production');
 
 const app = express();
 
@@ -35,5 +38,7 @@ setupApiRoutes(app);
 setupAppRoutes(app);
 
 http.createServer(app).listen(process.env.HTTP_PORT, () => {
-  logger.info(`HTTP server is now running on http://localhost:${process.env.HTTP_PORT}`);
+  logger.info(
+    `HTTP server is now running on http://localhost:${process.env.HTTP_PORT}`
+  );
 });

@@ -1,8 +1,7 @@
 const { resolve } = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin')
-
+const TerserPlugin = require('terser-webpack-plugin');
 
 const commonConfig = require('./webpack.config.common');
 
@@ -12,8 +11,8 @@ module.exports = merge(commonConfig, {
     new TerserPlugin({
       parallel: true,
       terserOptions: {
-        ecma: 6,
-      },
+        ecma: 6
+      }
     }),
     new HtmlWebpackPlugin({
       hash: true,
@@ -30,8 +29,8 @@ module.exports = merge(commonConfig, {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true,
-      },
-    }),
-  ],
+        minifyURLs: true
+      }
+    })
+  ]
 });

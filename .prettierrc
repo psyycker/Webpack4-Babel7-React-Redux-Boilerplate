@@ -6,4 +6,5 @@
   bracketSpacing: true,
   semi: true,
   useTabs: false,
+  indent: 2
 }
