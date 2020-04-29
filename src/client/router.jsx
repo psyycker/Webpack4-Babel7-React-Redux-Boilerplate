@@ -6,7 +6,7 @@ import NotFound from './containers/NotFound';
 import CounterLayout from './containers/counter-incrementer';
 import Header from './components/Header/Header';
 
-export default function() {
+export default function () {
   return (
     <Router>
       <div>

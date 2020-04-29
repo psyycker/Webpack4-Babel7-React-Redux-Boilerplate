@@ -4,7 +4,7 @@ const initialState = {
   value: 0
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   const { type } = action;
 
   switch (type) {

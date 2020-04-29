@@ -6,9 +6,9 @@ const reduxActionsLogger = createLogger({
   logErrors: true,
   // titleFormatter: ((action, time, took) =>
   // (`Action: ${String(action.type)} [${time} ${Math.round(took)}ms]`)),
-  stateTransformer: state => {
+  stateTransformer: (state) => {
     const newState = {};
-    Object.keys(state).forEach(i => {
+    Object.keys(state).forEach((i) => {
       if (Iterable.isIterable(state[i])) {
         newState[i] = state[i].toJS();
       } else {
