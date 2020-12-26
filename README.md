@@ -4,11 +4,11 @@ React boilerplate with ES2015, Express.js, and Webpack
 
 ## Technologies
 
-- React (v16) + Redux (v4) + React Router (v4)
+- React (v17) + Redux (v4) + React Router (v5)
 - Babel 7
 - Express.js (v4) as production and development server
-- Webpack 4 (production and development configurations)
-- SCSS support (+ sanitize.css included)
+- Webpack 5 (production and development configurations)
+- SCSS support
 - ES7
 
 ## Features
@@ -21,8 +21,8 @@ React boilerplate with ES2015, Express.js, and Webpack
 
 ### Installation
 ```bash
-git clone https://github.com/psyycker/Webpack4-Babel7-React-Redux-Boilerplate.git
-cd Webpack4-Babel7-React-Redux-Boilerplate
+git clone https://github.com/psyycker/Webpack5-Babel7-React-Redux-Boilerplate.git
+cd Webpack5-Babel7-React-Redux-Boilerplate
 npm install
 
 # remove boilerplate git references

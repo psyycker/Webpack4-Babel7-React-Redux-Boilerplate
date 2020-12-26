@@ -1,9 +1,7 @@
 const { resolve, join } = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const postcssPresetEnv = require('postcss-preset-env');
-
-const IS_DEV = process.env.NODE_ENV !== 'production';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   target: 'web',
@@ -40,34 +38,26 @@ module.exports = {
         loader: 'html-loader'
       },
       {
-        test: /\.s?css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: {
-            loader: 'style-loader'
-          },
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                // localIdentName: IS_DEV ? '[path]-[name]_[local]' : '[name]_[local]_[hash:5]', // [hash:base64]
-                modules: true,
-                sourceMap: IS_DEV
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: { sourceMap: IS_DEV }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: () => [postcssPresetEnv()],
-                sourceMap: IS_DEV
-              }
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          MiniCssExtractPlugin.loader,
+          // Translates CSS into CommonJS
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              import: false,
+              modules: true
             }
-          ]
-        })
+          },
+          // Compiles Sass to CSS
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.(png|eot|svg|ttf|woff|woff2)$/,
@@ -75,34 +65,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      disable: IS_DEV
-    }),
-    new webpack.EnvironmentPlugin(['NODE_ENV'])
-  ],
+  plugins: [new webpack.EnvironmentPlugin(['NODE_ENV'])],
   resolve: {
     modules: ['node_modules', join('src', 'client')],
     extensions: ['.js', '.jsx']
   },
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all'
-        }
-      }
-    }
-  },
-  stats: {
-    assetsSort: '!size',
-    children: false,
-    chunks: false,
-    colors: true,
-    entrypoints: false,
-    modules: false
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin(), new MiniCssExtractPlugin()]
   }
 };

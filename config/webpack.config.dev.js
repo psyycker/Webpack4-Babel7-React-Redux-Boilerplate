@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
@@ -15,10 +15,9 @@ module.exports = merge(commonConfig, {
     hotUpdateMainFilename: 'hot-update.[hash:6].json',
     hotUpdateChunkFilename: 'hot-update.[hash:6].js'
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-module-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
       template: resolve(__dirname, '..', 'src', 'client', 'index.html'),
