@@ -1,4 +1,4 @@
-React boilerplate with ES2015, Express.js, and Webpack
+# React boilerplate with ES2015, Express.js, and Webpack
 
 [![CircleCI](https://circleci.com/gh/psyycker/Webpack5-Babel7-React-Redux-Boilerplate.svg?style=svg)](https://circleci.com/gh/psyycker/Webpack4-Babel7-React-Redux-Boilerplate)
 
